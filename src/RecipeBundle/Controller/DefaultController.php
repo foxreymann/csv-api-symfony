@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('RecipeBundle:Default:index.html.twig');
     }
+
+    public function findByIdAction()
+    {
+        return $this->render('RecipeBundle:Default:index.html.twig');
+    }
 }

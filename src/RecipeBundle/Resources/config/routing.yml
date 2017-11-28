@@ -1,3 +1,7 @@
 recipe_homepage:
     path:     /
     defaults: { _controller: RecipeBundle:Default:index }
+
+recipe_id:
+    path:     /{id}
+    defaults: { _controller: RecipeBundle:Default:findById }
