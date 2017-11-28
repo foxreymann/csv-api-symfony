@@ -1,6 +1,6 @@
 recipe:
     resource: "@RecipeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   recipe
 
 app:
     resource: '@AppBundle/Controller/'
