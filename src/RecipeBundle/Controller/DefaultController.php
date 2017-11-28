@@ -3,6 +3,9 @@
 namespace RecipeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
 {
@@ -11,8 +14,10 @@ class DefaultController extends Controller
         return $this->render('RecipeBundle:Default:index.html.twig');
     }
 
-    public function findByIdAction()
+    public function findByIdAction(Request $request)
     {
-        return $this->render('RecipeBundle:Default:index.html.twig');
+        $data = $request->getContent();
+        $recipeId  = $data['id'];
+        return new JsonResponse(array('recipe id'=>$recipeId));
     }
 }
