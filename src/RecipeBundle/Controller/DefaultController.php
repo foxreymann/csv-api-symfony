@@ -14,10 +14,8 @@ class DefaultController extends Controller
         return $this->render('RecipeBundle:Default:index.html.twig');
     }
 
-    public function findByIdAction(Request $request)
+    public function findByIdAction($id)
     {
-        $data = $request->getContent();
-        $recipeId  = $data['id'];
-        return new JsonResponse(array('recipe id'=>$recipeId));
+        return new JsonResponse(array('recipe id'=>$id));
     }
 }
