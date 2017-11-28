@@ -4,7 +4,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "AppBundle\\": "src/AppBundle",
+            "RecipeBundle\\": "src/RecipeBundle"
         },
         "classmap": [
             "app/AppKernel.php",
